@@ -16,6 +16,8 @@
 
 package lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model;
 
+import android.util.Log;
+
 /**
  * This POJO holds the information about an account.
  */
@@ -24,6 +26,18 @@ public class Account {
     private String bankName;
     private String accountHolderName;
     private double balance;
+
+    public Account(){
+        this.accountNo = accountNo;
+        this.bankName = bankName;
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+
+      /*  Log.v("Account", accountNo);
+        Log.v("Account", bankName);
+        Log.v("Account", accountHolderName);
+        Log.v("Account", String.valueOf(balance));*/
+    }
 
     public String getAccountNo() {
         return accountNo;
@@ -62,5 +76,6 @@ public class Account {
         this.bankName = bankName;
         this.accountHolderName = accountHolderName;
         this.balance = balance;
+
     }
 }
